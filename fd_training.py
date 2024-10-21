@@ -56,33 +56,28 @@ def global_model(device, epochs, clients_num, clients_data, proxy_dataset, clien
         for i in range(clients_num):
             local_train_proxy_dataset(model=clients_model_list[i], device=device, proxy_dataset=proxy_dataset, soft_labels=soft_labels, optimizer=clients_optimizer_list[i], local_step=1)
         
-    #test_loss_list = []
+    test_loss_list = []
     #accuracy_list = []
     Accuracy_list, Precision_list, Recall_list, F1_list = [], [], [], [] 
     for i in range(clients_num):
         test_loss, acc, Accuracy, precision, recall, f1 = fd_testing.test(clients_model_list[i],device, test_loader)
         
-        #test_loss_list.append(test_loss)
+        test_loss_list.append(test_loss)
         #accuracy_list.append(acc)
         Accuracy_list.append(Accuracy)
         Precision_list.append(precision)
         Recall_list.append(recall)
         F1_list.append(f1)
             
-    #Loss = np.mean(test_loss_list)
+    Loss = np.mean(test_loss_list)
     #accuracy = np.mean(accuracy_list)
     Accuracy_mean = np.mean(Accuracy_list) 
     Precision_mean = np.mean(Precision_list) 
     Recall_mean = np.mean(Recall_list) 
     F1_mean = np.mean(F1_list) 
     
-    print(f'Epoch {epoch}, Loss: {Loss.item()}, acc: {acc}, Accuracy: {Accuracy}, Precision: {precision}, Recall: {recall}, F1-score: {f1}')
-    acc_max = 0     # 初始化最大准确率
-    if accuracy > acc_max:
-        epoch_record = epoch
-        acc_max = accuracy    
-    print("max accuracy", acc_max)
-    print("corresponding epoch", epoch_record)
+    print(f'Epoch {epoch}, Loss: {Loss}, F1-score: {F1_mean}')
+
     return Accuracy_mean, Precision_mean, Recall_mean, F1_mean
     
 
