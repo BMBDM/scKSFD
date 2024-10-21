@@ -42,12 +42,5 @@ def scksfd(X, y, clients_num, Proportion):
     run_time_1 = end_time - start_time  
     print('Global model run finished.')
     
-    print('Local model running...')
-    start_time = time.time()   
-    Accuracy_2, Precision_2, Recall_2, F1_2 = fd_training.local_model(device, epochs, clients_num, clients_data, clients_model_list, clients_optimizer_list, test_loader)
-    end_time = time.time()  
-    run_time_2 = end_time - start_time  
-    print('Local model run finished.')
-
-    return Accuracy_1, Precision_1, Recall_1, F1_1, run_time_1, Accuracy_2, Precision_2, Recall_2, F1_2, run_time_2
+    return Accuracy_1, Precision_1, Recall_1, F1_1, run_time_1
      

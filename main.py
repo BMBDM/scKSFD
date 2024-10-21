@@ -21,7 +21,7 @@ def scKSFD_model(dir, clients_num, Proportion):
     print('---------------------------------------------------------------')
 
     print('scKSFD beginning') 
-    Accuracy_1, Precision_1, Recall_1, F1_1, run_time_1, Accuracy_2, Precision_2, Recall_2, F1_2, run_time_2 = scksfd(df0.T.values, y, clients_num, Proportion)
+    Accuracy_1, Precision_1, Recall_1, F1_1, run_time_1 = scksfd(df0.T.values, y, clients_num, Proportion)
     print('scKSFD finished')
     print('---------------------------------------------------------------')
 
@@ -31,10 +31,3 @@ def scKSFD_model(dir, clients_num, Proportion):
     print('Recall:', Recall_1, '\n')
     print('Weighted-F1:', F1_1, '\n')
     print('Run_time:', run_time_1, '\n')
-
-    print('Local model results:\n')
-    print('Accuracy:', Accuracy_2, '\n')
-    print('Precision:', Precision_2, '\n')
-    print('Recall:', Recall_2, '\n')
-    print('Weighted-F1:', F1_2, '\n')
-    print('Run_time:', run_time_2, '\n')

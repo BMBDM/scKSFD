@@ -80,26 +80,3 @@ def global_model(device, epochs, clients_num, clients_data, proxy_dataset, clien
 
     return Accuracy_mean, Precision_mean, Recall_mean, F1_mean
     
-
-def local_model(device, epochs, clients_num, clients_data, clients_model_list, clients_optimizer_list, test_loader):
-    for epoch in range(1, epochs):
-        # train local model
-        for i in range(clients_num):
-            local_train(model=clients_model_list[i], device=device, local_dataset=clients_data[i], optimizer=clients_optimizer_list[i], local_step=1)
-    
-    Accuracy_list, Precision_list, Recall_list, F1_list = [], [], [], [] 
-    for i in range(clients_num):
-        test_loss, acc, Accuracy, precision, recall, f1 = fd_testing.test(clients_model_list[i],device, test_loader)
-        
-        Accuracy_list.append(Accuracy)
-        Precision_list.append(precision)
-        Recall_list.append(recall)
-        F1_list.append(f1)
-            
-    Accuracy_mean = np.mean(Accuracy_list) 
-    Precision_mean = np.mean(Precision_list) 
-    Recall_mean = np.mean(Recall_list) 
-    F1_mean = np.mean(F1_list) 
-    
-    return Accuracy_mean, Precision_mean, Recall_mean, F1_mean
-    
