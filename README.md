@@ -36,8 +36,5 @@ The input data format is shown in the CSV files located in the example_data/ dir
 - clients_num: Client numbers 
 - Proportion: Proxy sample proportions
 
-## Acknowledgements  
-Parts of the code and ideas in this project are inspired by and reference [Selective-FD project](https://github.com/shaojiawei07/Selective-FD.git). We are grateful to Shaojiawei07 for providing valuable code and insights that have significantly inspired and aided this project.
-
 ## Contact Us
 If you have any questions or suggestions, please contact us via email: [sunn19@tsinghua.org.cn].
