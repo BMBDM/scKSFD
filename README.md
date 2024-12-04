@@ -1,4 +1,4 @@
-# scKSFD: Federated Distillation Model with Knowledge Sharing for Cell Type Annotation with Clinical Transcriptome Data
+# scKSFD: Federated Distillation Model with Knowledge Sharing for Cell Type Classification with Clinical Transcriptome Data
 
 ## Project Overview
 scKSFD is a Python toolkit for cell type annotation using clinical transcriptome data, implementing a federated distillation model with knowledge sharing. It aims to facilitate researchers in performing cell type annotation analyses more conveniently.
