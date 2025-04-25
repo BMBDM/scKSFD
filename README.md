@@ -45,16 +45,16 @@ expr.csv example:
 
 cluster.csv example:
 
-|-------------      |
 | Cell type 1       |
+|-------------      |
 | Cell type 2       |
 | Cell type 1       |
 | Cell type 3       |
 
 
 ### Parameters
-- clients_num: Client numbers, for example, 2
-- Proportion: Proxy sample proportions, for example, 0.1
+- clients_num: Client numbers, e.g. 2
+- Proportion: Proxy sample proportions, e.g. 0.1
 
 ### Output
   ```
