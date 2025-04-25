@@ -44,8 +44,9 @@ expr.csv example:
 | GeneE       |   6    |   1    |   0    |   2    |
 
 cluster.csv example:
-|-------------|
+
 | Cell type 1       |
+|-------------      |
 | Cell type 2       |
 | Cell type 1       |
 | Cell type 3       |
@@ -56,13 +57,14 @@ cluster.csv example:
 - Proportion: Proxy sample proportions
 
 ### Output
-|-------------|
-| scKSFD results:       	|
-| Accuracy: 0.9937        	|
-| Precision: 0.9938        	|
-| Recall: 0.9937       		|
-| Weighted-F1: 0.9936        	|
-| Run_time: 387.95976758003235  |
+  ```
+  scKSFD results:       	
+  Accuracy: 0.9937        	
+  Precision: 0.9938        	
+  Recall: 0.9937       		
+  Weighted-F1: 0.9936        	
+  Run_time: 387.95976758003235 
+  ``` 
 
 ## Contact Us
 If you have any questions or suggestions, please contact us via email: [sunn19@tsinghua.org.cn].
