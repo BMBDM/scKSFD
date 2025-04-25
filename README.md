@@ -32,6 +32,7 @@ scKSFD is a Python toolkit for cell type annotation using clinical transcriptome
 The input data format is shown in the CSV files located in the example_data/ directory:
 - expr.csv
 - cluster.csv
+
 expr.csv example:
 
 | Gene / Cell | Cell_1 | Cell_2 | Cell_3 | Cell_4 |
@@ -43,6 +44,7 @@ expr.csv example:
 | GeneE       |   6    |   1    |   0    |   2    |
 
 cluster.csv example:
+|-------------|
 | Cell type 1       |
 | Cell type 2       |
 | Cell type 1       |
@@ -54,13 +56,13 @@ cluster.csv example:
 - Proportion: Proxy sample proportions
 
 ### Output
-scKSFD results:
-
-Accuracy: 0.9937 
-Precision: 0.9938 
-Recall: 0.9937 
-Weighted-F1: 0.9936 
-Run_time: 387.95976758003235 
+|-------------|
+| scKSFD results:       	|
+| Accuracy: 0.9937        	|
+| Precision: 0.9938        	|
+| Recall: 0.9937       		|
+| Weighted-F1: 0.9936        	|
+| Run_time: 387.95976758003235  |
 
 ## Contact Us
 If you have any questions or suggestions, please contact us via email: [sunn19@tsinghua.org.cn].
