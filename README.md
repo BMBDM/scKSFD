@@ -35,7 +35,7 @@ The input data format is shown in the CSV files located in the example_data/ dir
 
 expr.csv example:
 
-| Gene / Cell | Cell_1 | Cell_2 | Cell_3 | Cell_4 |
+|             | Cell_1 | Cell_2 | Cell_3 | Cell_4 |
 |-------------|--------|--------|--------|--------|
 | GeneA       |   10   |   0    |   3    |   8    |
 | GeneB       |   5    |   2    |   0    |   4    |
@@ -45,16 +45,16 @@ expr.csv example:
 
 cluster.csv example:
 
-| Cell type 1       |
 |-------------      |
+| Cell type 1       |
 | Cell type 2       |
 | Cell type 1       |
 | Cell type 3       |
 
 
 ### Parameters
-- clients_num: Client numbers 
-- Proportion: Proxy sample proportions
+- clients_num: Client numbers, for example, 2
+- Proportion: Proxy sample proportions, for example, 0.1
 
 ### Output
   ```
