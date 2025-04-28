@@ -8,8 +8,8 @@ scKSFD is a Python toolkit for cell type classification using clinical transcrip
 
 The model is realized through four steps: 
 * Clients independently train local models $\[f_1, f_2, ..., f_K \]$; 
-* The local model generates the soft labels of proxy dataset and sends them to the server $ \[p_1^{(i)}, p_2^{(i)}, ..., p_K^{(i)} \] = \[softmax(f_1 (\hat{x_i})), softmax(f_2 (\hat{x_i})), ..., softmax(f_K (\hat{x_i}))\], i=1,2,...,n $; 
-* The server aggregates prediction results and sends them to the clients $ \[ \hat{y_1}, \hat{y_2}, ..., \hat{y_n} \] = \[ ∑_{k=1}^K 1_{\[y_1=k\]} ⋅p_k^{(1)}, ∑_{k=1}^K 1_{\[y_2=k\]} ⋅p_k^{(2)}, ..., ∑_{k=1}^K 1_{\[y_n=k\]} ⋅p_k^{(n)} \]$; 
+* The local model generates the soft labels of proxy dataset and sends them to the server $ \[p_1^{(i)}, p_2^{(i)}, ..., p_K^{(i)} \], p_k^{(i)}= softmax(f_k (\hat{x_i}), i=1,2,...,n $; 
+* The server aggregates prediction results and sends them to the clients $ \[ \hat{y_1}, \hat{y_2}, ..., \hat{y_n} \], \hat{y_i} = ∑_{k=1}^K 1_{\[y_i=k\]} ⋅p_k^{(i)} $; 
 * Clients utilize soft labels for knowledge distillation. 
 
 ## Installation Guide
