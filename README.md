@@ -8,8 +8,8 @@ scKSFD is a Python toolkit for cell type classification using clinical transcrip
 
 The model is realized through four steps: 
 * Clients independently train local models $\[f_1, f_2, ..., f_K \]$; 
-* The local model generates the soft labels of proxy dataset and sends them to the server $\[p_1^{(i)}, p_2^{(i)}, ..., p_K^{(i)} \]$, $p_k^{(i)}= softmax(f_k (\hat{x_i}), i=1,2,...,n$; 
-* The server aggregates prediction results and sends them to the clients $\[ \hat{y_1}, \hat{y_2}, ..., \hat{y_n} \]$, $\hat{y_i} = ∑_{k=1}^K 1_{\[y_i=k\]} ⋅p_k^{(i)}$; 
+* The local model generates the soft labels of proxy dataset and sends them to the server $\[p_1^{(i)}, p_2^{(i)}, ..., p_K^{(i)} \]$, where $p_k^{(i)}= softmax(f_k (\hat{x_i})), k=1,2,...,K, i=1,2,...,n$; 
+* The server aggregates prediction results and sends them to the clients $\[ \hat{y_1}, \hat{y_2}, ..., \hat{y_n} \]$, where $\hat{y_i} = ∑_{k=1}^K 1_{\[y_i=k\]} ⋅p_k^{(i)}, i=1,2,...,n$; 
 * Clients utilize soft labels for knowledge distillation. 
 
 ## Installation Guide
