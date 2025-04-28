@@ -14,7 +14,7 @@ The model is realized through four steps:
 
 (3) The server aggregates prediction results and sends them to the clients $\[ \hat{y_1}, \hat{y_2}, ..., \hat{y_n} \]$, where $\hat{y_i} = ∑_{k=1}^K 1_{\[y_i=k\]} ⋅p_k^{(i)}, i=1,2,...,n$; 
 
-(4) Clients utilize soft labels for knowledge distillation $\[f_1', f_2', ..., f_K' \]$, where $f_k'=f_k(\hat{D_{proxy}})$. 
+(4) Clients utilize soft labels for knowledge distillation $\[f_1', f_2', ..., f_K' \]$, where $f_k'=f_k(\hat{D_{proxy}}), k=1,2,...,K$. 
  
 ## Installation Guide
 - Clone the repository:
