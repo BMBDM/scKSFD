@@ -39,11 +39,11 @@ The model is realized through four steps:
   scKSFD_model('example_data/', clients_num, Proportion)
   ```
 ### Input
-The input data format is shown in the CSV files located in the example_data/ directory:
+The input data should be in CSV format and placed in the example_data/ directory:
 - expr.csv
 - cluster.csv
 
-expr.csv example:
+expr.csv format example:
 
 |             | Cell_1 | Cell_2 | Cell_3 | Cell_4 |
 |-------------|--------|--------|--------|--------|
@@ -53,7 +53,7 @@ expr.csv example:
 | GeneD       |   3    |   3    |   2    |   5    |
 | GeneE       |   6    |   1    |   0    |   2    |
 
-cluster.csv example:
+cluster.csv format example:
 
 | Cell type 1       |
 |-------------      |
